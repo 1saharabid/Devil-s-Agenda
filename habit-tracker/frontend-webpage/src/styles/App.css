@@ -2,18 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #be2323;
 }
 
 header {
-    background: #35424a;
+    background: #26770e;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
 }
 
 button {
-    background-color: #5cb85c;
+    background-color: #b85ca6;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -41,8 +41,8 @@ h1 {
 }
 
 .footer {
-    background: #35424a;
-    color: #ffffff;
+    background: #fff3de;
+    color: #fff3de;
     text-align: center;
     padding: 10px 0;
     position: relative;
