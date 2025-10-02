@@ -1,0 +1,16 @@
+/* Layout for MyTodoList page */
+.my-todo-list-layout {
+	display: flex;
+	align-items: flex-start;
+	gap: 32px;
+}
+
+.my-todo-list-layout img {
+	flex-shrink: 0;
+}
+
+.todo-list-container {
+	flex: 1;
+}
+
+
