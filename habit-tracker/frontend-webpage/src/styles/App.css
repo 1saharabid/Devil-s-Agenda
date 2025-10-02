@@ -1,51 +1,131 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #be2323;
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
 }
 
-header {
-    background: #26770e;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #fdf3e7;
+  color: #5a3e36;
+  overflow: hidden; /* Prevent full-page scroll */
 }
 
-button {
-    background-color: #b85ca6;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+/* Dashboard Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh; /* Take full screen */
+  overflow: hidden;
 }
 
-button:hover {
-    background-color: #4cae4c;
+/* Panel Shared Styles */
+.profile, .calendar, .sidebar, .todo, .reminders, .habit {
+  background-color: #a6785e;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+/* Grid Positioning */
+.profile {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
-h1 {
-    margin: 20px 0;
+.calendar {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer {
-    background: #fff3de;
-    color: #fff3de;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  overflow-y: auto;
+}
+
+.todo {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  overflow-y: auto;
+}
+
+.todo {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  overflow-y: auto;
+}
+
+.reminders {
+  grid-column: 3 / 4;
+  grid-row: 2;
+  overflow-y: auto;
+}
+
+.habit {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  overflow-y: auto;
+}
+
+/* To-do & Reminder Lists */
+.todo ul, .reminders ul {
+  padding-left: 20px;
+  margin: 10px 0 0;
+}
+
+.todo li, .reminders li {
+  margin-bottom: 8px;
+}
+
+/* Habit Grid */
+.habit-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.habit-box {
+  background-color: #fff8e1;
+  color: #5a3e36;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top:5px;
+  background-color: #fff8e1;
+  padding: 10px;
+  border-radius: 10px;
+  color: #5a3e36;
+  font-size: 0.9em;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.calendar-grid div {
+  background-color: #ffeac1;
+  padding: 5px;
+  border-radius: 5px;
 }
